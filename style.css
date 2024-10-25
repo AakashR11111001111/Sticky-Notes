@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow: hidden;
+    user-select: none;
+    font-family: "Playwrite GB S", serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+#heads{
+    position: absolute;
+    background: transparent;
+}
+
+#main-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.txtInput{
+    width: 95%;
+    margin: 0 auto;
+    height: 75%;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+#section1, #section2{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+#section1{
+    display: unset;
+    background-color: #d2dce6;
+    flex-wrap: wrap;
+}
+
+.txtInput, .buttons{
+    animation: fade-down 1s cubic-bezier(.18,.86,.63,1.24);
+}
+
+#section2{
+    overflow-y: scroll;
+    display: unset;
+    gap: 10px;
+    flex-wrap: wrap;
+    position: relative;
+    animation: fade-up 1s cubic-bezier(.18,.86,.63,1.24);
+}
+
+#section2 h1{
+    text-align: center;
+}
+
+#section2::-webkit-scrollbar{
+    width: 5px;
+}
+
+#section2::-webkit-scrollbar-thumb{
+    color: black;
+}
+
+#section2 h4{
+    text-align: center;
+}
+
+#notes-container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+#notes-container::-webkit-scrollbar{
+    width: 5px;
+}
+#notes-container::-webkit-scrollbar-thumb{
+    color: black;
+}
+
+#TxtArea{
+    font-family: "Playwrite GB S", serif;
+    height: 250px;
+    max-height: 90%;
+    min-height: 20%;
+    width: 500px;
+    max-width: 100%;
+    min-width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 3px inset grey;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px 2px;
+    transition: border 0.5s ease, box-shadow 0.2s ease;
+}
+
+#TxtArea:focus-visible{
+    border: 3px inset rgba(247, 0, 0, 0.541);
+    outline: none;
+    box-shadow: 0px 0px 30px 2px rgba(247, 0, 0, 0.541);
+}
+
+.buttons{
+    width: 95%;
+    margin: 0 auto;
+}
+
+#addBtn{
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    height: 50px;
+    width: 150px;
+    border-radius: 25px;
+    overflow: hidden;
+    border: none;
+    z-index: 0;
+    background: linear-gradient(to right, #f7186a,#fbb03b);
+    transition: all 0.5s ease;
+}
+
+#addBtn::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.3);
+    transition: all 0.5s ease;
+}
+
+#addBtn:hover::before{
+    z-index: -1;
+    width: 0%;
+    box-shadow: 0 0 600px 3px rgba(255,255,255,0.3);
+}
+
+#addBtn:hover{
+    cursor: pointer;
+    box-shadow:0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+
+#notes-container{
+    width: 100%;
+    height: calc(100% - 53px);
+    position: relative;
+}
+
+#notes-container h4{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.delete-btn{
+    transition: all 0.5s ease;
+}
+
+.delete-btn:hover{
+    color: white;
+}
+
+@keyframes fade-up {
+    from{
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-down{
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+    to{
+        transform:scale(1);
+        opacity: 1;
+    }
+}
+
