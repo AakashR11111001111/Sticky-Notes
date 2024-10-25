@@ -13,10 +13,6 @@ This is a simple Sticky Notes application built using HTML, CSS, and JavaScript.
 
 Check out the live version here: [Sticky Notes Demo](https://aakashr11111001111.github.io/Sticky-Notes/)
 
-## Screenshots
-
-*(Optional: Add screenshots here if needed)*
-
 ## Getting Started
 
 Follow these instructions to set up and run the project locally.
